@@ -1,0 +1,9 @@
+<% @products.each do |e| %>
+<p>
+    商品名:<%= e.name %>
+    価格:<%= e.price %>
+    <%= link_to "削除", product_path(e), data: {"turbo-method": :delete} %>
+</p>
+<% end %>
+
+<%= link_to "商品を追加する", new_product_path %>
